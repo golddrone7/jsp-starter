@@ -42,6 +42,8 @@ public class ProcessServlet extends HttpServlet {
         // request 객체는 하나의 요청간에 데이터 수송을 할 수 있음.
         // session 객체는 여러 요청간에 데이터 수송 가능
         req.setAttribute("dl", dancerList);
+
+//        List<Dancer> dl = (List<Dancer>) req.getAttribute("dl");
         RequestDispatcher dp = req.getRequestDispatcher("/WEB-INF/chap04/dancer/list.jsp");
         dp.forward(req, resp);
 
